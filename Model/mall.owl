@@ -1,0 +1,2007 @@
+@prefix : <http://www.mall.gr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.mall.gr> .
+
+<http://www.mall.gr> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.mall.gr#apasxoleiGiaAsfaleia
+
+:apasxoleiGiaAsfaleia rdf:type owl:FunctionalProperty ,
+                               owl:ObjectProperty ;
+                      
+                      rdfs:domain :Mall ;
+                      
+                      rdfs:range :Prosopiko_Asfaleias ;
+                      
+                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#apasxoleiGiaKatastimata
+
+:apasxoleiGiaKatastimata rdf:type owl:FunctionalProperty ,
+                                  owl:ObjectProperty ;
+                         
+                         rdfs:domain :Mall ;
+                         
+                         rdfs:range :Prosopiko_Katastimaton ;
+                         
+                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#apasxoleiGiaKathariotita
+
+:apasxoleiGiaKathariotita rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:domain :Mall ;
+                          
+                          rdfs:range :Prosopiko_Kathariotitas ;
+                          
+                          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#apasxoleiProsopiko
+
+:apasxoleiProsopiko rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:domain :Mall ;
+                    
+                    rdfs:range :Prosopiko .
+
+
+
+###  http://www.mall.gr#dioikei
+
+:dioikei rdf:type owl:FunctionalProperty ,
+                  owl:ObjectProperty ;
+         
+         rdfs:domain :Dioikisi ;
+         
+         rdfs:range :Mall .
+
+
+
+###  http://www.mall.gr#dioikeitaiApo
+
+:dioikeitaiApo rdf:type owl:FunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:range :Dioikisi ;
+               
+               rdfs:domain :Mall ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#einaiIdioktitis
+
+:einaiIdioktitis rdf:type owl:FunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:domain :Idioktitis ;
+                 
+                 rdfs:range :Mall ;
+                 
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#einaiMetoxoi
+
+:einaiMetoxoi rdf:type owl:FunctionalProperty ,
+                       owl:ObjectProperty ;
+              
+              rdfs:range :Mall ;
+              
+              rdfs:domain :Metoxoi ;
+              
+              owl:inverseOf :exeiMetoxous ;
+              
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#einaiProedros
+
+:einaiProedros rdf:type owl:FunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:range :Mall ;
+               
+               rdfs:domain :Proedros ;
+               
+               owl:inverseOf :exeiProedro ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiEgkatastaseis
+
+:exeiEgkatastaseis rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:range :Egkatastaseis ;
+                   
+                   rdfs:domain :Mall .
+
+
+
+###  http://www.mall.gr#exeiFagito
+
+:exeiFagito rdf:type owl:FunctionalProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:domain :Egkatastaseis ;
+            
+            rdfs:range :Estiasi ;
+            
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiIdioktiti
+
+:exeiIdioktiti rdf:type owl:FunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:range :Idioktitis ;
+               
+               rdfs:domain :Mall ;
+               
+               owl:inverseOf :einaiIdioktitis ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiLianikoEmporio
+
+:exeiLianikoEmporio rdf:type owl:FunctionalProperty ,
+                             owl:ObjectProperty ;
+                    
+                    rdfs:domain :Egkatastaseis ;
+                    
+                    rdfs:range :Isogeio ;
+                    
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiLianikoEmporioEndisis
+
+:exeiLianikoEmporioEndisis rdf:type owl:FunctionalProperty ,
+                                    owl:ObjectProperty ;
+                           
+                           rdfs:domain :Egkatastaseis ;
+                           
+                           rdfs:range :Katastimata_Endisis ;
+                           
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiLianikoEmporioOikiakonSiskevon
+
+:exeiLianikoEmporioOikiakonSiskevon rdf:type owl:FunctionalProperty ,
+                                             owl:ObjectProperty ;
+                                    
+                                    rdfs:domain :Egkatastaseis ;
+                                    
+                                    rdfs:range :Katastimata_Oikiakon_Siskevon ;
+                                    
+                                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiLianikoEmporioTexnologias
+
+:exeiLianikoEmporioTexnologias rdf:type owl:FunctionalProperty ,
+                                        owl:ObjectProperty ;
+                               
+                               rdfs:domain :Egkatastaseis ;
+                               
+                               rdfs:range :Katastimata_Texnologias ;
+                               
+                               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiLianikoEmporioYpodisis
+
+:exeiLianikoEmporioYpodisis rdf:type owl:FunctionalProperty ,
+                                     owl:ObjectProperty ;
+                            
+                            rdfs:domain :Egkatastaseis ;
+                            
+                            rdfs:range :Katastimata_Ypodisis ;
+                            
+                            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiMetoxous
+
+:exeiMetoxous rdf:type owl:FunctionalProperty ,
+                       owl:ObjectProperty ;
+              
+              rdfs:domain :Mall ;
+              
+              rdfs:range :Metoxoi ;
+              
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiParking
+
+:exeiParking rdf:type owl:FunctionalProperty ,
+                      owl:ObjectProperty ;
+             
+             rdfs:domain :Egkatastaseis ;
+             
+             rdfs:range :Ipogeio ;
+             
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiProedro
+
+:exeiProedro rdf:type owl:FunctionalProperty ,
+                      owl:ObjectProperty ;
+             
+             rdfs:domain :Mall ;
+             
+             rdfs:range :Proedros ;
+             
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#exeiPsixagogia
+
+:exeiPsixagogia rdf:type owl:FunctionalProperty ,
+                         owl:ObjectProperty ;
+                
+                rdfs:range :Cinema ;
+                
+                rdfs:domain :Egkatastaseis ;
+                
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#parexeiATM
+
+:parexeiATM rdf:type owl:FunctionalProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:range :ATM ;
+            
+            rdfs:domain :Ipiresies ;
+            
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#parexeiIpiresies
+
+:parexeiIpiresies rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:range :Ipiresies ;
+                  
+                  rdfs:domain :Mall .
+
+
+
+###  http://www.mall.gr#parexeiMetafora
+
+:parexeiMetafora rdf:type owl:FunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:domain :Ipiresies ;
+                 
+                 rdfs:range :Taxi ;
+                 
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#parexeiPV
+
+:parexeiPV rdf:type owl:FunctionalProperty ,
+                    owl:ObjectProperty ;
+           
+           rdfs:domain :Ipiresies ;
+           
+           rdfs:range :Stathmos_Proton_Voithion ;
+           
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#poulaei
+
+:poulaei rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :Mall ;
+         
+         rdfs:range :Proionta .
+
+
+
+###  http://www.mall.gr#poulaei1OikiakonSiskevon
+
+:poulaei1OikiakonSiskevon rdf:type owl:FunctionalProperty ,
+                                   owl:ObjectProperty ;
+                          
+                          rdfs:domain :Katastimata_Oikiakon_Siskevon ;
+                          
+                          rdfs:range :Proionta_1ou_Orofou_Oikiakon_Siskevon ;
+                          
+                          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#poulaei1Texnologia
+
+:poulaei1Texnologia rdf:type owl:FunctionalProperty ,
+                             owl:ObjectProperty ;
+                    
+                    rdfs:domain :Katastimata_Texnologias ;
+                    
+                    rdfs:range :Proionta_1ou_Orofou_Texnologias ;
+                    
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#poulaei2Endisis
+
+:poulaei2Endisis rdf:type owl:FunctionalProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:domain :Katastimata_Endisis ;
+                 
+                 rdfs:range :Proionta_2ou_Orofou_Endisis ;
+                 
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#poulaei2Ypodisis
+
+:poulaei2Ypodisis rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:domain :Katastimata_Ypodisis ;
+                  
+                  rdfs:range :Proionta_2ou_Orofou_Ypodisis ;
+                  
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#poulaeiKava
+
+:poulaeiKava rdf:type owl:FunctionalProperty ,
+                      owl:ObjectProperty ;
+             
+             rdfs:domain :Kava ;
+             
+             rdfs:range :Proionta_Kavas ;
+             
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#poulaeiSM
+
+:poulaeiSM rdf:type owl:FunctionalProperty ,
+                    owl:ObjectProperty ;
+           
+           rdfs:range :Proionta_Super_Market ;
+           
+           rdfs:domain :Super_Market ;
+           
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#provalei
+
+:provalei rdf:type owl:FunctionalProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:domain :Cinema ;
+          
+          rdfs:range :Tainies ;
+          
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.mall.gr#servirei
+
+:servirei rdf:type owl:FunctionalProperty ,
+                   owl:ObjectProperty ;
+          
+          rdfs:domain :Estiasi ;
+          
+          rdfs:range :Fagito ;
+          
+          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.mall.gr#imerominiaProslipsis
+
+:imerominiaProslipsis rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:domain :Prosopiko ;
+                      
+                      rdfs:range xsd:dateTime .
+
+
+
+###  http://www.mall.gr#misthosProsopikouAsfaleias
+
+:misthosProsopikouAsfaleias rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:domain :Prosopiko_Asfaleias ;
+                            
+                            rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#misthosProsopikouKatastimaton
+
+:misthosProsopikouKatastimaton rdf:type owl:DatatypeProperty ;
+                               
+                               rdfs:domain :Prosopiko_Katastimaton ;
+                               
+                               rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#misthosProsopikouKathariotitas
+
+:misthosProsopikouKathariotitas rdf:type owl:DatatypeProperty ;
+                                
+                                rdfs:domain :Prosopiko_Kathariotitas ;
+                                
+                                rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#posostoMetoxon
+
+:posostoMetoxon rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :Metoxoi ;
+                
+                rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#posotitaEisitirionCinema
+
+:posotitaEisitirionCinema rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:domain :Tainies ;
+                          
+                          rdfs:range xsd:integer .
+
+
+
+###  http://www.mall.gr#posotitaProiontonEndisis
+
+:posotitaProiontonEndisis rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:domain :Proionta_2ou_Orofou_Endisis ;
+                          
+                          rdfs:range xsd:integer .
+
+
+
+###  http://www.mall.gr#posotitaProiontonOikiakonSIskevon
+
+:posotitaProiontonOikiakonSIskevon rdf:type owl:DatatypeProperty ;
+                                   
+                                   rdfs:domain :Proionta_1ou_Orofou_Oikiakon_Siskevon ;
+                                   
+                                   rdfs:range xsd:integer ;
+                                   
+                                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://www.mall.gr#posotitaProiontonTexnologias
+
+:posotitaProiontonTexnologias rdf:type owl:DatatypeProperty ;
+                              
+                              rdfs:domain :Proionta_1ou_Orofou_Texnologias ;
+                              
+                              rdfs:range xsd:integer .
+
+
+
+###  http://www.mall.gr#posotitaProiontonYpodisis
+
+:posotitaProiontonYpodisis rdf:type owl:DatatypeProperty ;
+                           
+                           rdfs:domain :Proionta_2ou_Orofou_Ypodisis ;
+                           
+                           rdfs:range xsd:integer ;
+                           
+                           rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://www.mall.gr#theseisParking
+
+:theseisParking rdf:type owl:DatatypeProperty ;
+                
+                rdfs:domain :Parking ;
+                
+                rdfs:range xsd:integer .
+
+
+
+###  http://www.mall.gr#timiEisitirionCinema
+
+:timiEisitirionCinema rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:domain :Tainies ;
+                      
+                      rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#timiProiontonEndisis
+
+:timiProiontonEndisis rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:domain :Proionta_2ou_Orofou_Endisis ;
+                      
+                      rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#timiProiontonOikiakonSiskevon
+
+:timiProiontonOikiakonSiskevon rdf:type owl:DatatypeProperty ;
+                               
+                               rdfs:domain :Proionta_1ou_Orofou_Oikiakon_Siskevon ;
+                               
+                               rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#timiProiontonTexnologias
+
+:timiProiontonTexnologias rdf:type owl:DatatypeProperty ;
+                          
+                          rdfs:domain :Proionta_1ou_Orofou_Texnologias ;
+                          
+                          rdfs:range xsd:double .
+
+
+
+###  http://www.mall.gr#timiProiontonYpodisis
+
+:timiProiontonYpodisis rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:domain :Proionta_2ou_Orofou_Ypodisis ;
+                       
+                       rdfs:range xsd:double .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.mall.gr#1os_Orofos
+
+<http://www.mall.gr#1os_Orofos> rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :Egkatastaseis ;
+                                
+                                owl:disjointWith <http://www.mall.gr#3os_Orofos> ,
+                                                 :Ipogeio .
+
+
+
+###  http://www.mall.gr#2os_Orofos
+
+<http://www.mall.gr#2os_Orofos> rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :Egkatastaseis ;
+                                
+                                owl:disjointWith <http://www.mall.gr#3os_Orofos> ,
+                                                 :Ipogeio .
+
+
+
+###  http://www.mall.gr#3os_Orofos
+
+<http://www.mall.gr#3os_Orofos> rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :Egkatastaseis ;
+                                
+                                owl:disjointWith :Ipogeio ,
+                                                 :Isogeio .
+
+
+
+###  http://www.mall.gr#ATM
+
+:ATM rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Ipiresies ;
+     
+     owl:disjointWith :Stathmos_Proton_Voithion ,
+                      :Taxi .
+
+
+
+###  http://www.mall.gr#Cinema
+
+:Cinema rdf:type owl:Class ;
+        
+        rdfs:subClassOf <http://www.mall.gr#3os_Orofos> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :provalei ;
+                          owl:someValuesFrom :Tainies
+                        ] ;
+        
+        owl:disjointWith :Estiasi .
+
+
+
+###  http://www.mall.gr#Dioikisi
+
+:Dioikisi rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Mall ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :dioikei ;
+                            owl:someValuesFrom :Mall
+                          ] ;
+          
+          owl:disjointWith :Egkatastaseis ,
+                           :Ipiresies ,
+                           :Proionta ,
+                           :Prosopiko .
+
+
+
+###  http://www.mall.gr#Egkatastaseis
+
+:Egkatastaseis rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Mall ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiLianikoEmporio ;
+                                 owl:someValuesFrom :Isogeio
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiLianikoEmporioYpodisis ;
+                                 owl:someValuesFrom :Katastimata_Ypodisis
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiLianikoEmporioOikiakonSiskevon ;
+                                 owl:someValuesFrom :Katastimata_Oikiakon_Siskevon
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiPsixagogia ;
+                                 owl:someValuesFrom <http://www.mall.gr#3os_Orofos>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiLianikoEmporioEndisis ;
+                                 owl:someValuesFrom :Katastimata_Endisis
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiLianikoEmporioTexnologias ;
+                                 owl:someValuesFrom :Katastimata_Texnologias
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :exeiParking ;
+                                 owl:someValuesFrom :Ipogeio
+                               ] ;
+               
+               owl:disjointWith :Ipiresies ,
+                                :Prosopiko .
+
+
+
+###  http://www.mall.gr#Estiasi
+
+:Estiasi rdf:type owl:Class ;
+         
+         rdfs:subClassOf <http://www.mall.gr#3os_Orofos> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :servirei ;
+                           owl:someValuesFrom :Fagito
+                         ] .
+
+
+
+###  http://www.mall.gr#Fagito
+
+:Fagito rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Proionta_3ou_Orofou ;
+        
+        owl:disjointWith :Tainies .
+
+
+
+###  http://www.mall.gr#Idioktitis
+
+:Idioktitis rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Dioikisi ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :einaiIdioktitis ;
+                              owl:someValuesFrom :Mall
+                            ] .
+
+
+
+###  http://www.mall.gr#Ipiresies
+
+:Ipiresies rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Mall ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :parexeiMetafora ;
+                             owl:someValuesFrom :Taxi
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :parexeiPV ;
+                             owl:someValuesFrom :Stathmos_Proton_Voithion
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :parexeiATM ;
+                             owl:someValuesFrom :ATM
+                           ] ;
+           
+           owl:disjointWith :Proionta ,
+                            :Prosopiko .
+
+
+
+###  http://www.mall.gr#Ipogeio
+
+:Ipogeio rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Egkatastaseis ;
+         
+         owl:disjointWith :Isogeio .
+
+
+
+###  http://www.mall.gr#Isogeio
+
+:Isogeio rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Egkatastaseis .
+
+
+
+###  http://www.mall.gr#Katastimata_Endisis
+
+:Katastimata_Endisis rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf <http://www.mall.gr#2os_Orofos> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :poulaei2Endisis ;
+                                       owl:someValuesFrom :Proionta_2ou_Orofou_Endisis
+                                     ] ;
+                     
+                     owl:disjointWith :Katastimata_Ypodisis .
+
+
+
+###  http://www.mall.gr#Katastimata_Oikiakon_Siskevon
+
+:Katastimata_Oikiakon_Siskevon rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf <http://www.mall.gr#1os_Orofos> ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :poulaei1OikiakonSiskevon ;
+                                                 owl:someValuesFrom :Proionta_1ou_Orofou_Oikiakon_Siskevon
+                                               ] ;
+                               
+                               owl:disjointWith :Katastimata_Texnologias .
+
+
+
+###  http://www.mall.gr#Katastimata_Texnologias
+
+:Katastimata_Texnologias rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf <http://www.mall.gr#1os_Orofos> ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :poulaei1Texnologia ;
+                                           owl:someValuesFrom :Proionta_1ou_Orofou_Texnologias
+                                         ] .
+
+
+
+###  http://www.mall.gr#Katastimata_Ypodisis
+
+:Katastimata_Ypodisis rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf <http://www.mall.gr#2os_Orofos> ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :poulaei2Ypodisis ;
+                                        owl:someValuesFrom :Proionta_2ou_Orofou_Ypodisis
+                                      ] .
+
+
+
+###  http://www.mall.gr#Kava
+
+:Kava rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Isogeio ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :poulaeiKava ;
+                        owl:someValuesFrom :Proionta_Kavas
+                      ] ;
+      
+      owl:disjointWith :Super_Market .
+
+
+
+###  http://www.mall.gr#Mall
+
+:Mall rdf:type owl:Class ;
+      
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :exeiEgkatastaseis ;
+                        owl:someValuesFrom :Egkatastaseis
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :apasxoleiProsopiko ;
+                        owl:someValuesFrom :Prosopiko
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :dioikeitaiApo ;
+                        owl:someValuesFrom :Dioikisi
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :poulaei ;
+                        owl:someValuesFrom :Proionta
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :parexeiIpiresies ;
+                        owl:someValuesFrom :Ipiresies
+                      ] .
+
+
+
+###  http://www.mall.gr#Metoxoi
+
+:Metoxoi rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Dioikisi ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :einaiMetoxoi ;
+                           owl:someValuesFrom :Mall
+                         ] .
+
+
+
+###  http://www.mall.gr#Parking
+
+:Parking rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Ipogeio .
+
+
+
+###  http://www.mall.gr#Proedros
+
+:Proedros rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Dioikisi ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :einaiProedros ;
+                            owl:someValuesFrom :Mall
+                          ] .
+
+
+
+###  http://www.mall.gr#Proionta
+
+:Proionta rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Mall ;
+          
+          owl:disjointWith :Prosopiko .
+
+
+
+###  http://www.mall.gr#Proionta_1ou_Orofou
+
+:Proionta_1ou_Orofou rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Proionta ;
+                     
+                     owl:disjointWith :Proionta_2ou_Orofou ,
+                                      :Proionta_3ou_Orofou ,
+                                      :Proionta_Isogeiou .
+
+
+
+###  http://www.mall.gr#Proionta_1ou_Orofou_Oikiakon_Siskevon
+
+:Proionta_1ou_Orofou_Oikiakon_Siskevon rdf:type owl:Class ;
+                                       
+                                       rdfs:subClassOf :Proionta_1ou_Orofou ;
+                                       
+                                       owl:disjointWith :Proionta_1ou_Orofou_Texnologias .
+
+
+
+###  http://www.mall.gr#Proionta_1ou_Orofou_Texnologias
+
+:Proionta_1ou_Orofou_Texnologias rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :Proionta_1ou_Orofou .
+
+
+
+###  http://www.mall.gr#Proionta_2ou_Orofou
+
+:Proionta_2ou_Orofou rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Proionta ;
+                     
+                     owl:disjointWith :Proionta_3ou_Orofou ,
+                                      :Proionta_Isogeiou .
+
+
+
+###  http://www.mall.gr#Proionta_2ou_Orofou_Endisis
+
+:Proionta_2ou_Orofou_Endisis rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Proionta_2ou_Orofou ;
+                             
+                             owl:disjointWith :Proionta_2ou_Orofou_Ypodisis .
+
+
+
+###  http://www.mall.gr#Proionta_2ou_Orofou_Ypodisis
+
+:Proionta_2ou_Orofou_Ypodisis rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Proionta_2ou_Orofou .
+
+
+
+###  http://www.mall.gr#Proionta_3ou_Orofou
+
+:Proionta_3ou_Orofou rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Proionta ;
+                     
+                     owl:disjointWith :Proionta_Isogeiou .
+
+
+
+###  http://www.mall.gr#Proionta_Isogeiou
+
+:Proionta_Isogeiou rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Proionta .
+
+
+
+###  http://www.mall.gr#Proionta_Kavas
+
+:Proionta_Kavas rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Proionta_Isogeiou ;
+                
+                owl:disjointWith :Proionta_Super_Market .
+
+
+
+###  http://www.mall.gr#Proionta_Super_Market
+
+:Proionta_Super_Market rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Proionta_Isogeiou .
+
+
+
+###  http://www.mall.gr#Prosopiko
+
+:Prosopiko rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Mall ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :apasxoleiGiaKathariotita ;
+                             owl:someValuesFrom :Prosopiko_Kathariotitas
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :apasxoleiGiaKatastimata ;
+                             owl:someValuesFrom :Prosopiko_Katastimaton
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :apasxoleiGiaAsfaleia ;
+                             owl:someValuesFrom :Prosopiko_Asfaleias
+                           ] .
+
+
+
+###  http://www.mall.gr#Prosopiko_Asfaleias
+
+:Prosopiko_Asfaleias rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Prosopiko ;
+                     
+                     owl:disjointWith :Prosopiko_Katastimaton ,
+                                      :Prosopiko_Kathariotitas .
+
+
+
+###  http://www.mall.gr#Prosopiko_Katastimaton
+
+:Prosopiko_Katastimaton rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Prosopiko ;
+                        
+                        owl:disjointWith :Prosopiko_Kathariotitas .
+
+
+
+###  http://www.mall.gr#Prosopiko_Kathariotitas
+
+:Prosopiko_Kathariotitas rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Prosopiko .
+
+
+
+###  http://www.mall.gr#Stathmos_Proton_Voithion
+
+:Stathmos_Proton_Voithion rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Ipiresies ;
+                          
+                          owl:disjointWith :Taxi .
+
+
+
+###  http://www.mall.gr#Super_Market
+
+:Super_Market rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Isogeio ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :poulaeiSM ;
+                                owl:someValuesFrom :Proionta_Super_Market
+                              ] .
+
+
+
+###  http://www.mall.gr#Tainies
+
+:Tainies rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Proionta_3ou_Orofou .
+
+
+
+###  http://www.mall.gr#Taxi
+
+:Taxi rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Ipiresies .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.mall.gr#Athanasios_Poulios
+
+:Athanasios_Poulios rdf:type :Metoxoi ,
+                             owl:NamedIndividual ;
+                    
+                    :posostoMetoxon "32.0"^^xsd:double ;
+                    
+                    :einaiMetoxoi :Athanasios_Poulios .
+
+
+
+###  http://www.mall.gr#Athina_Petropoulou
+
+:Athina_Petropoulou rdf:type :Metoxoi ,
+                             owl:NamedIndividual ;
+                    
+                    :posostoMetoxon "28.0"^^xsd:double ;
+                    
+                    :einaiMetoxoi :Athina_Petropoulou .
+
+
+
+###  http://www.mall.gr#Biki_Korakaki
+
+:Biki_Korakaki rdf:type :Prosopiko_Kathariotitas ,
+                        owl:NamedIndividual ;
+               
+               :imerominiaProslipsis "2010-05-30T09:00:00"^^xsd:dateTime ;
+               
+               :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+               
+               :apasxoleiGiaKathariotita :Biki_Korakaki .
+
+
+
+###  http://www.mall.gr#Buplic
+
+:Buplic rdf:type :Katastimata_Texnologias ,
+                 owl:NamedIndividual ;
+        
+        :exeiLianikoEmporioTexnologias :Buplic .
+
+
+
+###  http://www.mall.gr#Burger
+
+:Burger rdf:type :Fagito ,
+                 owl:NamedIndividual ;
+        
+        :servirei :Burger .
+
+
+
+###  http://www.mall.gr#Burger_Queen
+
+:Burger_Queen rdf:type :Estiasi ,
+                       owl:NamedIndividual ;
+              
+              :exeiFagito :Burger_Queen .
+
+
+
+###  http://www.mall.gr#Didl
+
+:Didl rdf:type :Super_Market ,
+               owl:NamedIndividual ;
+      
+      :exeiLianikoEmporio :Didl .
+
+
+
+###  http://www.mall.gr#Dimitris_Stamatopoulos
+
+:Dimitris_Stamatopoulos rdf:type :Prosopiko_Asfaleias ,
+                                 owl:NamedIndividual ;
+                        
+                        :imerominiaProslipsis "2010-07-13T09:00:00"^^xsd:dateTime ;
+                        
+                        :misthosProsopikouAsfaleias "910.42"^^xsd:double ;
+                        
+                        :apasxoleiGiaAsfaleia :Dimitris_Stamatopoulos .
+
+
+
+###  http://www.mall.gr#Diomidis_Kostis
+
+:Diomidis_Kostis rdf:type :Prosopiko_Kathariotitas ,
+                          owl:NamedIndividual ;
+                 
+                 :imerominiaProslipsis "2011-02-17T09:00:00"^^xsd:dateTime ;
+                 
+                 :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+                 
+                 :apasxoleiGiaKathariotita :Diomidis_Kostis .
+
+
+
+###  http://www.mall.gr#Elena_Karavokiri
+
+:Elena_Karavokiri rdf:type :Prosopiko_Katastimaton ,
+                           owl:NamedIndividual ;
+                  
+                  :imerominiaProslipsis "2012-01-30T09:00:00"^^xsd:dateTime ;
+                  
+                  :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                  
+                  :apasxoleiGiaKatastimata :Elena_Karavokiri .
+
+
+
+###  http://www.mall.gr#Eleni_Gennimata
+
+:Eleni_Gennimata rdf:type :Prosopiko_Katastimaton ,
+                          owl:NamedIndividual ;
+                 
+                 :imerominiaProslipsis "2016-10-20T09:00:00"^^xsd:dateTime ;
+                 
+                 :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                 
+                 :apasxoleiGiaKatastimata :Eleni_Gennimata .
+
+
+
+###  http://www.mall.gr#Erietta_Zaimi
+
+:Erietta_Zaimi rdf:type :Prosopiko_Kathariotitas ,
+                        owl:NamedIndividual ;
+               
+               :imerominiaProslipsis "2020-02-19T09:00:00"^^xsd:dateTime ;
+               
+               :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+               
+               :apasxoleiGiaKathariotita :Erietta_Zaimi .
+
+
+
+###  http://www.mall.gr#Forema
+
+:Forema rdf:type :Proionta_2ou_Orofou_Endisis ,
+                 owl:NamedIndividual ;
+        
+        :timiProiontonEndisis "43.56"^^xsd:double ;
+        
+        :posotitaProiontonEndisis 5 ;
+        
+        :poulaei2Endisis :Forema .
+
+
+
+###  http://www.mall.gr#Fournos_Mikrokimaton
+
+:Fournos_Mikrokimaton rdf:type :Proionta_1ou_Orofou_Oikiakon_Siskevon ,
+                               owl:NamedIndividual ;
+                      
+                      :timiProiontonOikiakonSiskevon "120.19"^^xsd:double ;
+                      
+                      :posotitaProiontonOikiakonSIskevon 7 ;
+                      
+                      :poulaei1OikiakonSiskevon :Fournos_Mikrokimaton .
+
+
+
+###  http://www.mall.gr#Georgios_Asimakopoulos
+
+:Georgios_Asimakopoulos rdf:type :Metoxoi ,
+                                 owl:NamedIndividual ;
+                        
+                        :posostoMetoxon "20.0"^^xsd:double ;
+                        
+                        :einaiMetoxoi :Georgios_Asimakopoulos .
+
+
+
+###  http://www.mall.gr#Giannis_Drakos
+
+:Giannis_Drakos rdf:type :Prosopiko_Katastimaton ,
+                         owl:NamedIndividual ;
+                
+                :imerominiaProslipsis "2015-09-22T09:00:00"^^xsd:dateTime ;
+                
+                :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                
+                :apasxoleiGiaKatastimata :Giannis_Drakos .
+
+
+
+###  http://www.mall.gr#Giannis_Papadopoulos
+
+:Giannis_Papadopoulos rdf:type :Proedros ,
+                               owl:NamedIndividual ;
+                      
+                      :einaiProedros :Giannis_Papadopoulos .
+
+
+
+###  http://www.mall.gr#Gileko
+
+:Gileko rdf:type :Proionta_2ou_Orofou_Endisis ,
+                 owl:NamedIndividual ;
+        
+        :posotitaProiontonEndisis 21 ;
+        
+        :timiProiontonEndisis "24.99"^^xsd:double ;
+        
+        :poulaei2Endisis :Gileko .
+
+
+
+###  http://www.mall.gr#Giorgos_Koromilas
+
+:Giorgos_Koromilas rdf:type :Prosopiko_Kathariotitas ,
+                            owl:NamedIndividual ;
+                   
+                   :imerominiaProslipsis "2012-08-17T09:00:00"^^xsd:dateTime ;
+                   
+                   :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+                   
+                   :apasxoleiGiaKathariotita :Giorgos_Koromilas .
+
+
+
+###  http://www.mall.gr#H_Xora_Tou_Potou
+
+:H_Xora_Tou_Potou rdf:type :Kava ,
+                           owl:NamedIndividual ;
+                  
+                  :exeiLianikoEmporio :H_Xora_Tou_Potou .
+
+
+
+###  http://www.mall.gr#Ilektriki_Skoupa
+
+:Ilektriki_Skoupa rdf:type :Proionta_1ou_Orofou_Oikiakon_Siskevon ,
+                           owl:NamedIndividual ;
+                  
+                  :posotitaProiontonOikiakonSIskevon 9 ;
+                  
+                  :timiProiontonOikiakonSiskevon "90.29"^^xsd:double ;
+                  
+                  :poulaei1OikiakonSiskevon :Ilektriki_Skoupa .
+
+
+
+###  http://www.mall.gr#Ilias_Trikalinos
+
+:Ilias_Trikalinos rdf:type :Prosopiko_Katastimaton ,
+                           owl:NamedIndividual ;
+                  
+                  :imerominiaProslipsis "2011-03-15T09:00:00"^^xsd:dateTime ;
+                  
+                  :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                  
+                  :apasxoleiGiaKatastimata :Ilias_Trikalinos .
+
+
+
+###  http://www.mall.gr#Iordanis_Iliadis
+
+:Iordanis_Iliadis rdf:type :Prosopiko_Katastimaton ,
+                           owl:NamedIndividual ;
+                  
+                  :imerominiaProslipsis "2010-04-10T09:00:00"^^xsd:dateTime ;
+                  
+                  :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                  
+                  :apasxoleiGiaKatastimata :Iordanis_Iliadis .
+
+
+
+###  http://www.mall.gr#Karta_Grafikon
+
+:Karta_Grafikon rdf:type :Proionta_1ou_Orofou_Texnologias ,
+                         owl:NamedIndividual ;
+                
+                :posotitaProiontonTexnologias 4 ;
+                
+                :timiProiontonTexnologias "579.99"^^xsd:double ;
+                
+                :poulaei1Texnologia :Karta_Grafikon .
+
+
+
+###  http://www.mall.gr#Kosta_Dimara
+
+:Kosta_Dimara rdf:type :Prosopiko_Kathariotitas ,
+                       owl:NamedIndividual ;
+              
+              :imerominiaProslipsis "2014-01-31T09:00:00"^^xsd:dateTime ;
+              
+              :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+              
+              :apasxoleiGiaKathariotita :Kosta_Dimara .
+
+
+
+###  http://www.mall.gr#Kovotsolos
+
+:Kovotsolos rdf:type :Katastimata_Oikiakon_Siskevon ,
+                     owl:NamedIndividual ;
+            
+            :exeiLianikoEmporioOikiakonSiskevon :Kovotsolos .
+
+
+
+###  http://www.mall.gr#Lakis_Teloglou
+
+:Lakis_Teloglou rdf:type :Prosopiko_Kathariotitas ,
+                         owl:NamedIndividual ;
+                
+                :imerominiaProslipsis "2013-11-07T09:00:00"^^xsd:dateTime ;
+                
+                :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+                
+                :apasxoleiGiaKathariotita :Lakis_Teloglou .
+
+
+
+###  http://www.mall.gr#Laptop
+
+:Laptop rdf:type :Proionta_1ou_Orofou_Texnologias ,
+                 owl:NamedIndividual ;
+        
+        :timiProiontonTexnologias "1299.99"^^xsd:double ;
+        
+        :posotitaProiontonTexnologias 5 ;
+        
+        :poulaei1Texnologia :Laptop .
+
+
+
+###  http://www.mall.gr#MacDolmas
+
+:MacDolmas rdf:type :Estiasi ,
+                    owl:NamedIndividual ;
+           
+           :exeiFagito :MacDolmas .
+
+
+
+###  http://www.mall.gr#Maria_Avramidou
+
+:Maria_Avramidou rdf:type :Prosopiko_Katastimaton ,
+                          owl:NamedIndividual ;
+                 
+                 :imerominiaProslipsis "2018-06-28T09:00:00"^^xsd:dateTime ;
+                 
+                 :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                 
+                 :apasxoleiGiaKatastimata :Maria_Avramidou .
+
+
+
+###  http://www.mall.gr#Mavrikios_Akridas
+
+:Mavrikios_Akridas rdf:type :Prosopiko_Katastimaton ,
+                            owl:NamedIndividual ;
+                   
+                   :imerominiaProslipsis "2011-02-28T09:00:00"^^xsd:dateTime ;
+                   
+                   :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                   
+                   :apasxoleiGiaKatastimata :Mavrikios_Akridas .
+
+
+
+###  http://www.mall.gr#MediumMarkt
+
+:MediumMarkt rdf:type :Katastimata_Texnologias ,
+                      owl:NamedIndividual ;
+             
+             :exeiLianikoEmporioTexnologias :MediumMarkt .
+
+
+
+###  http://www.mall.gr#Mike
+
+:Mike rdf:type :Katastimata_Ypodisis ,
+               owl:NamedIndividual ;
+      
+      :exeiLianikoEmporioYpodisis :Mike .
+
+
+
+###  http://www.mall.gr#Mpotes
+
+:Mpotes rdf:type :Proionta_2ou_Orofou_Ypodisis ,
+                 owl:NamedIndividual ;
+        
+        :timiProiontonYpodisis "167.49"^^xsd:double ;
+        
+        :posotitaProiontonYpodisis 22 ;
+        
+        :poulaei2Ypodisis :Mpotes .
+
+
+
+###  http://www.mall.gr#Multimara
+
+:Multimara rdf:type :Katastimata_Oikiakon_Siskevon ,
+                    owl:NamedIndividual ;
+           
+           :exeiLianikoEmporioOikiakonSiskevon :Multimara .
+
+
+
+###  http://www.mall.gr#Nasos_Doukas
+
+:Nasos_Doukas rdf:type :Prosopiko_Asfaleias ,
+                       owl:NamedIndividual ;
+              
+              :imerominiaProslipsis "2016-05-26T09:00:00"^^xsd:dateTime ;
+              
+              :misthosProsopikouAsfaleias "910.42"^^xsd:double ;
+              
+              :apasxoleiGiaAsfaleia :Nasos_Doukas .
+
+
+
+###  http://www.mall.gr#NetElectro
+
+:NetElectro rdf:type :Katastimata_Oikiakon_Siskevon ,
+                     owl:NamedIndividual ;
+            
+            :exeiLianikoEmporioOikiakonSiskevon :NetElectro .
+
+
+
+###  http://www.mall.gr#Panagiota_Apostolou
+
+:Panagiota_Apostolou rdf:type :Prosopiko_Katastimaton ,
+                              owl:NamedIndividual ;
+                     
+                     :imerominiaProslipsis "2019-01-13T09:00:00"^^xsd:dateTime ;
+                     
+                     :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                     
+                     :apasxoleiGiaKatastimata :Panagiota_Apostolou .
+
+
+
+###  http://www.mall.gr#Panteloni
+
+:Panteloni rdf:type :Proionta_2ou_Orofou_Endisis ,
+                    owl:NamedIndividual ;
+           
+           :timiProiontonEndisis "56.79"^^xsd:double ;
+           
+           :posotitaProiontonEndisis 6 ;
+           
+           :poulaei2Endisis :Panteloni .
+
+
+
+###  http://www.mall.gr#Pantofles
+
+:Pantofles rdf:type :Proionta_2ou_Orofou_Ypodisis ,
+                    owl:NamedIndividual ;
+           
+           :posotitaProiontonYpodisis 14 ;
+           
+           :timiProiontonYpodisis "34.59"^^xsd:double ;
+           
+           :poulaei2Ypodisis :Pantofles .
+
+
+
+###  http://www.mall.gr#Papatrexas
+
+:Papatrexas rdf:type :Tainies ,
+                     owl:NamedIndividual ;
+            
+            :posotitaEisitirionCinema 43 ;
+            
+            :timiEisitirionCinema "7.99"^^xsd:double ;
+            
+            :provalei :Papatrexas .
+
+
+
+###  http://www.mall.gr#Papoutsi_Apo_Ton_Topo_Sou
+
+:Papoutsi_Apo_Ton_Topo_Sou rdf:type :Katastimata_Ypodisis ,
+                                    owl:NamedIndividual ;
+                           
+                           :exeiLianikoEmporioYpodisis :Papoutsi_Apo_Ton_Topo_Sou .
+
+
+
+###  http://www.mall.gr#Parking
+
+:Parking rdf:type :Parking ,
+                  owl:NamedIndividual ;
+         
+         :theseisParking 14 ;
+         
+         :exeiParking :Parking .
+
+
+
+###  http://www.mall.gr#Pedila
+
+:Pedila rdf:type :Proionta_2ou_Orofou_Ypodisis ,
+                 owl:NamedIndividual ;
+        
+        :posotitaProiontonYpodisis 32 ;
+        
+        :timiProiontonYpodisis "45.59"^^xsd:double ;
+        
+        :poulaei2Ypodisis :Pedila .
+
+
+
+###  http://www.mall.gr#Petros_Kalaris
+
+:Petros_Kalaris rdf:type :Prosopiko_Katastimaton ,
+                         owl:NamedIndividual ;
+                
+                :imerominiaProslipsis "2018-09-20T09:00:00"^^xsd:dateTime ;
+                
+                :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                
+                :apasxoleiGiaKatastimata :Petros_Kalaris .
+
+
+
+###  http://www.mall.gr#Pizza
+
+:Pizza rdf:type :Fagito ,
+                owl:NamedIndividual ;
+       
+       :servirei :Pizza .
+
+
+
+###  http://www.mall.gr#Pizza_Cap
+
+:Pizza_Cap rdf:type :Estiasi ,
+                    owl:NamedIndividual ;
+           
+           :exeiFagito :Pizza_Cap .
+
+
+
+###  http://www.mall.gr#Plisio
+
+:Plisio rdf:type :Katastimata_Texnologias ,
+                 owl:NamedIndividual ;
+        
+        :exeiLianikoEmporioTexnologias :Plisio .
+
+
+
+###  http://www.mall.gr#Psara
+
+:Psara rdf:type :Katastimata_Endisis ,
+                owl:NamedIndividual ;
+       
+       :exeiLianikoEmporioEndisis :Psara .
+
+
+
+###  http://www.mall.gr#Rouxa_Me_To_Litro
+
+:Rouxa_Me_To_Litro rdf:type :Katastimata_Endisis ,
+                            owl:NamedIndividual ;
+                   
+                   :exeiLianikoEmporioEndisis :Rouxa_Me_To_Litro .
+
+
+
+###  http://www.mall.gr#Soumoutis
+
+:Soumoutis rdf:type :Super_Market ,
+                    owl:NamedIndividual ;
+           
+           :exeiLianikoEmporio :Soumoutis .
+
+
+
+###  http://www.mall.gr#Stathis_Theoxaris
+
+:Stathis_Theoxaris rdf:type :Prosopiko_Asfaleias ,
+                            owl:NamedIndividual ;
+                   
+                   :imerominiaProslipsis "2010-05-14T09:00:00"^^xsd:dateTime ;
+                   
+                   :misthosProsopikouAsfaleias "910.42"^^xsd:double ;
+                   
+                   :apasxoleiGiaAsfaleia :Stathis_Theoxaris .
+
+
+
+###  http://www.mall.gr#Stelios_Lazarou
+
+:Stelios_Lazarou rdf:type :Prosopiko_Katastimaton ,
+                          owl:NamedIndividual ;
+                 
+                 :imerominiaProslipsis "2017-09-11T09:00:00"^^xsd:dateTime ;
+                 
+                 :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+                 
+                 :apasxoleiGiaKatastimata :Stelios_Lazarou .
+
+
+
+###  http://www.mall.gr#Stroumfakia
+
+:Stroumfakia rdf:type :Tainies ,
+                      owl:NamedIndividual ;
+             
+             :posotitaEisitirionCinema 54 ;
+             
+             :timiEisitirionCinema "6.99"^^xsd:double ;
+             
+             :provalei :Stroumfakia .
+
+
+
+###  http://www.mall.gr#Telis_Kazakis
+
+:Telis_Kazakis rdf:type :Prosopiko_Katastimaton ,
+                        owl:NamedIndividual ;
+               
+               :imerominiaProslipsis "2012-08-10T09:00:00"^^xsd:dateTime ;
+               
+               :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+               
+               :apasxoleiGiaKatastimata :Telis_Kazakis .
+
+
+
+###  http://www.mall.gr#Thanos_Kapsis
+
+:Thanos_Kapsis rdf:type :Prosopiko_Katastimaton ,
+                        owl:NamedIndividual ;
+               
+               :imerominiaProslipsis "2010-05-30T09:00:00"^^xsd:dateTime ;
+               
+               :misthosProsopikouKatastimaton "786.38"^^xsd:double ;
+               
+               :apasxoleiGiaKatastimata :Thanos_Kapsis .
+
+
+
+###  http://www.mall.gr#Theoni_Vourou
+
+:Theoni_Vourou rdf:type :Prosopiko_Kathariotitas ,
+                        owl:NamedIndividual ;
+               
+               :imerominiaProslipsis "2010-05-30T09:00:00"^^xsd:dateTime ;
+               
+               :misthosProsopikouKathariotitas "850.67"^^xsd:double ;
+               
+               :apasxoleiGiaKathariotita :Theoni_Vourou .
+
+
+
+###  http://www.mall.gr#Thermenomeno_Ipostroma
+
+:Thermenomeno_Ipostroma rdf:type :Proionta_1ou_Orofou_Oikiakon_Siskevon ,
+                                 owl:NamedIndividual ;
+                        
+                        :posotitaProiontonOikiakonSIskevon 1 ;
+                        
+                        :timiProiontonOikiakonSiskevon "59.99"^^xsd:double ;
+                        
+                        :poulaei1OikiakonSiskevon :Thermenomeno_Ipostroma .
+
+
+
+###  http://www.mall.gr#Tileorasi
+
+:Tileorasi rdf:type :Proionta_1ou_Orofou_Texnologias ,
+                    owl:NamedIndividual ;
+           
+           :posotitaProiontonTexnologias 12 ;
+           
+           :timiProiontonTexnologias "389.99"^^xsd:double ;
+           
+           :poulaei1Texnologia :Tileorasi .
+
+
+
+###  http://www.mall.gr#Titanikos_2
+
+:Titanikos_2 rdf:type :Tainies ,
+                      owl:NamedIndividual ;
+             
+             :timiEisitirionCinema "5.5"^^xsd:double ;
+             
+             :posotitaEisitirionCinema 65 ;
+             
+             :provalei :Titanikos_2 .
+
+
+
+###  http://www.mall.gr#Town_Cinemas
+
+:Town_Cinemas rdf:type :Cinema ,
+                       owl:NamedIndividual ;
+              
+              :exeiPsixagogia :Town_Cinemas .
+
+
+
+###  http://www.mall.gr#Tuma
+
+:Tuma rdf:type :Katastimata_Ypodisis ,
+               owl:NamedIndividual ;
+      
+      :exeiLianikoEmporioYpodisis :Tuma .
+
+
+
+###  http://www.mall.gr#Vafla
+
+:Vafla rdf:type :Fagito ,
+                owl:NamedIndividual ;
+       
+       :servirei :Vafla .
+
+
+
+###  http://www.mall.gr#Vaflafla
+
+:Vaflafla rdf:type :Estiasi ,
+                   owl:NamedIndividual ;
+          
+          :exeiFagito :Vaflafla .
+
+
+
+###  http://www.mall.gr#Vasilis_Kerkidis
+
+:Vasilis_Kerkidis rdf:type :Prosopiko_Asfaleias ,
+                           owl:NamedIndividual ;
+                  
+                  :imerominiaProslipsis "2018-02-09T09:00:00"^^xsd:dateTime ;
+                  
+                  :misthosProsopikouAsfaleias "910.42"^^xsd:double ;
+                  
+                  :apasxoleiGiaAsfaleia :Vasilis_Kerkidis .
+
+
+
+###  http://www.mall.gr#Xristos_Georgiou
+
+:Xristos_Georgiou rdf:type :Idioktitis ,
+                           owl:NamedIndividual ;
+                  
+                  :einaiIdioktitis :Xristos_Georgiou .
+
+
+
+###  http://www.mall.gr#Zelestino
+
+:Zelestino rdf:type :Katastimata_Endisis ,
+                    owl:NamedIndividual ;
+           
+           :exeiLianikoEmporioEndisis :Zelestino .
+
+
+
+###  http://www.mall.gr#Zeta_Adrianou
+
+:Zeta_Adrianou rdf:type :Metoxoi ,
+                        owl:NamedIndividual ;
+               
+               :posostoMetoxon "20.0"^^xsd:double ;
+               
+               :einaiMetoxoi :Zeta_Adrianou .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Athanasios_Poulios
+                        :Athina_Petropoulou
+                        :Biki_Korakaki
+                        :Buplic
+                        :Burger
+                        :Burger_Queen
+                        :Didl
+                        :Dimitris_Stamatopoulos
+                        :Diomidis_Kostis
+                        :Elena_Karavokiri
+                        :Eleni_Gennimata
+                        :Erietta_Zaimi
+                        :Forema
+                        :Fournos_Mikrokimaton
+                        :Georgios_Asimakopoulos
+                        :Giannis_Drakos
+                        :Giannis_Papadopoulos
+                        :Gileko
+                        :Giorgos_Koromilas
+                        :H_Xora_Tou_Potou
+                        :Ilektriki_Skoupa
+                        :Ilias_Trikalinos
+                        :Iordanis_Iliadis
+                        :Karta_Grafikon
+                        :Kosta_Dimara
+                        :Kovotsolos
+                        :Lakis_Teloglou
+                        :Laptop
+                        :MacDolmas
+                        :Maria_Avramidou
+                        :Mavrikios_Akridas
+                        :MediumMarkt
+                        :Mike
+                        :Mpotes
+                        :Multimara
+                        :Nasos_Doukas
+                        :NetElectro
+                        :Panagiota_Apostolou
+                        :Panteloni
+                        :Pantofles
+                        :Papatrexas
+                        :Papoutsi_Apo_Ton_Topo_Sou
+                        :Parking
+                        :Pedila
+                        :Petros_Kalaris
+                        :Pizza
+                        :Pizza_Cap
+                        :Plisio
+                        :Psara
+                        :Rouxa_Me_To_Litro
+                        :Soumoutis
+                        :Stathis_Theoxaris
+                        :Stelios_Lazarou
+                        :Stroumfakia
+                        :Telis_Kazakis
+                        :Thanos_Kapsis
+                        :Theoni_Vourou
+                        :Thermenomeno_Ipostroma
+                        :Tileorasi
+                        :Titanikos_2
+                        :Town_Cinemas
+                        :Tuma
+                        :Vafla
+                        :Vaflafla
+                        :Vasilis_Kerkidis
+                        :Xristos_Georgiou
+                        :Zelestino
+                        :Zeta_Adrianou
+                      )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
