@@ -1,0 +1,76 @@
+
+1)Erotima gia na paro to prosopiko
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX my: <http://www.mall.gr#>
+SELECT ?subject ?x 
+	WHERE {?subject rdf:type ?x.
+	?x rdfs:subClassOf my:Prosopiko.}
+================================================================
+2)Epistrefei tis times ton proionton texnologias
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX my: <http://www.mall.gr#>
+SELECT ?x (STR(?timiT) AS ?TimiProiontonTexnologias)
+WHERE {?x  my:poulaei1Texnologia ?y.
+              ?x my:timiProiontonTexnologias ?timiT.
+}
+
+================================================================
+3)Epistrefei tis posotites ton proionton tou 1ou Orofou(Texnologias kai Oikiakon Siskevon)
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX my: <http://www.mall.gr#>
+SELECT (?x AS ?Proionta) (STR(?pos) AS ?Posotita_Proionton_1ou_Orofou)
+WHERE {
+              {?x  my:poulaei1Texnologia ?y1.} UNION {?x  my:poulaei1OikiakonSiskevon ?y2.}
+
+              {?x my:posotitaProiontonTexnologias ?pos.} UNION {?x my:posotitaProiontonOikiakonSIskevon ?pos.}
+}
+
+================================================================================
+4)Epistrefei to pososto Idioktisias ton Metoxon
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX my: <http://www.mall.gr#>
+
+SELECT (?x AS ?Metoxoi) (STR(?pos) AS ?Pososto_Idioktisias_Metoxon)
+WHERE {
+              ?x  my:einaiMetoxoi ?y.
+
+              ?x my:posostoMetoxon ?pos.
+}
+ORDER BY DESC(?pos)
+
+===============================================================================
+
+5) Epistrefei toys ergazomenous Asfaleias kai Kathariotitas pou proslifthikan meta apo 23/05/2014
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX my: <http://www.mall.gr#>
+SELECT (?x AS ?Prosopiko) (STR(?date) AS ?Imerominia_Proslipsis)
+WHERE {
+	{?x my:apasxoleiGiaAsfaleia ?y1.} UNION {?x my:apasxoleiGiaKathariotita ?y2}
+	{
+		SELECT ?x ?date
+		WHERE
+		{
+ 			 ?x my:imerominiaProslipsis ?date .
+  			FILTER (?date > "2014-05-23T10:20:13"^^xsd:dateTime)
+		}
+	}
+}
+ORDER BY ASC(?date)
